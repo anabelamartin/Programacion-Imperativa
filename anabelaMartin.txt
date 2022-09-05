@@ -1,0 +1,116 @@
+// Ejercicio 1: 
+// Desarrollar una función para cada uno de las siguientes apartados: 
+// Que reciba por parámetro dos números, los multiplique, y si ese resultado es par, retorne ‘El resultado 
+// de multiplicar [num1] y [num2] es: [resultado] y es par’, caso contrario retornará ‘El resultado de 
+// multiplicar [num1] y [num2] es: [resultado] y es impar’
+
+// function parOImpar(num1,num2){
+//      multiplicacion = num1*num2
+//     if(multiplicacion %2==0){
+//         return `el resultado es  ${multiplicacion} y es par`
+//     } else return `el resultado es  ${multiplicacion}  y es impar `
+
+// }
+// console.log(parOImpar(3,5))
+//---------------------------------------------------------------------------------------------------------------
+// Que reciba por parámetro dos números y solo retorne su suma si ambos son múltiplos de 3, 
+// sino retornará ‘Los números deben ser múltiplos de 3’
+
+// function multiploDeTres(num1,num2){
+//     let suma = num1+num2
+//     if(num1 %3==0 && num2 %3==0){
+//         return suma 
+
+//     } else return "Los números deben ser múltiplos de 3"
+
+// }
+// console.log(multiploDeTres(3,6))
+//-----------------------------------------------------------------------------------------------------------------
+// Ejercicio 2:
+// Deberás escribir un objeto literal llamado empleado que contenga las siguientes propiedades que deberás completar con tus datos:
+// nombre string
+// empresa string
+// sueldos array de 12 números
+//---------------------------------------------------------
+// teniendo en cuenta los datos del punto número 1:
+// Crear un método del objeto que calcule el sueldo mayor del empleado y si supera los 80.000 retornará: 
+//  ‘El mayor sueldo de [nombre] en [empresa] es [sueldoMayor] por lo tanto pagará impuesto a las ganancias’ 
+//  , y sino retornará:  ‘El mayor sueldo de [nombre] en [empresa] es [sueldoMayor] por lo tanto NO pagará impuesto a las ganancias’
+
+// let empleado = {
+//     nombre: "clara",
+//     empresa: "consultora",
+//     sueldos: [100, 200, 300, 400, 500, 540, 670, 890, 900, 140, 670, 890],
+//     sueldoMayor: function() {
+//         let mayor = 0
+//         for (let i = 0; i < this.sueldos.length; i++) {
+//             if (this.sueldos[i] > mayor) {
+//                 mayor = this.sueldos[i]
+//             }
+//         } if (mayor > 80000) {
+//             return `El mayor sueldo de ${this.nombre} en ${this.empresa} es ${mayor} por lo tanto pagará impuesto a las ganancias`
+//         } else {
+//             return `El mayor sueldo de ${this.nombre} en ${this.empresa} es ${mayor} por lo tanto NO pagará impuesto a las ganancias`
+
+//         }
+//     }
+// }
+// console.log(empleado.sueldoMayor())
+//--------------------------------------------------------------------------------------------------------------------------
+
+// Ejercicio 3: 
+// Utilizando el siguiente array de objetos: 
+
+let autos = [{
+    año: 2015,
+    color: "gris",
+    puertas: 5
+},
+{
+    año: 2010,
+    color: "rojo",
+    puertas: 3
+},
+{
+    año: 2012,
+    color: "gris",
+    puertas: 4
+},
+{
+    año: 2022,
+    color: "rojo",
+    puertas: 3
+},
+{
+    año: 2018,
+    color: "blanco",
+    puertas: 4
+}]
+
+// Utilizando un método de array eliminar el último elemento del array autos.
+
+// console.log(autos)
+// autos.pop()
+// console.log(autos)
+
+//---------------------------------------------------------------------------------------
+// Imprimir por consola el array antes y después de quitar el elemento para ver las diferencias.
+
+//-----------------------------------------------------------------------------------------------------
+// Crear una función que reciba como parámetros el array y un color, y me devuelva un nuevo array con todos
+// los objetos que coinciden con ese color recibido por parámetro
+function colores(arr, string) {
+    let newArray = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].color == string) {
+            newArray.push(arr[i])
+
+        }
+    }
+    return newArray
+
+}
+
+console.log(colores(autos,"gris"))
+//-------------------------------------------------------------------------------------------------------------
+// Ejecutar la función y mostrar por consola el nuevo array.
